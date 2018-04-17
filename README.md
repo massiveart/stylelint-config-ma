@@ -24,8 +24,34 @@ Create a [`.stylelintrc`](http://stylelint.io/user-guide/configuration/) config 
 }
 ```
 
-## [Update & Publish to NPM](https://docs.npmjs.com/cli/version)
-```npm version [ major | minor | patch ]```
+## [Update & Publish to NPM]
 
-```npm publish```
+### 1. Create release on github
+
+Update package.json version on master branch:
+
+```bash
+git checkout master
+git pull origin master
+npm version [ major | minor | patch ] --no-git-tag-version
+git add .
+git commit -m "Release <version>"
+git push origin master
+```
+
+Generate changelog:
+
+```bash
+github_changelog_generator --future-release <version>
+```
+
+Copy the text of the last release into and get new release.
+
+### 2. Publish release
+
+```
+git fetch --tags
+git checkout <version>
+npm publish
+```
 
