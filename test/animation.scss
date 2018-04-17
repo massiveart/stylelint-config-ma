@@ -1,0 +1,17 @@
+@keyframes exampleTest {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+.test {
+    animation-name: exampleTest;
+}
+
+.unknown {
+    animation-name: unknownFunction;
+}

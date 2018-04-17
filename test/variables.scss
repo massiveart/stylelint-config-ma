@@ -1,0 +1,7 @@
+$test: red;
+$testColor: blue;
+
+.test-class {
+    background: $test;
+    color: $testColor;
+}
