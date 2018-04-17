@@ -24,7 +24,7 @@ Create a [`.stylelintrc`](http://stylelint.io/user-guide/configuration/) config 
 }
 ```
 
-## [Update & Publish to NPM]
+## Version Update & Publish to NPM
 
 ### 1. Create release on github
 
