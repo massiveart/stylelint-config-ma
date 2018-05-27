@@ -1,0 +1,19 @@
+// Breakpoints
+$test1: (
+    desktop: 200px,
+    tablet: 350px,
+    mobile: 400px,
+);
+
+// Values
+$test2: (
+    desktop: 100px,
+    tablet: 150px,
+    mobile: 200px,
+);
+
+@each $key, $value in $test2 {
+    @media only screen and (max-width: map-get($test1, $key)) {
+        margin: $value;
+    }
+}

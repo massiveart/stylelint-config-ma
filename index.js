@@ -21,7 +21,9 @@ module.exports = {
                 ],
                 "ignoreAtRules": [
                     "extend",
-                    "include"
+                    "include",
+                    "else",
+                    "content"
                 ]
             }
         ],
@@ -32,10 +34,16 @@ module.exports = {
                     "content",
                     "extend",
                     "include",
-                    "mixin"
+                    "mixin",
+                    "if",
+                    "for",
+                    "else",
+                    "error",
+                    "each"
                 ]
             }
         ],
+        "at-rule-name-space-after": "always",
         "function-comma-newline-before": "never-multi-line",
         "function-name-case": [
             "lower",
@@ -43,6 +51,12 @@ module.exports = {
                 "ignoreFunctions": [
                     "/^[a-z][a-z-A-Z0-9]*$/"
                 ]
+            }
+        ],
+        "block-closing-brace-newline-after": [
+            "always",
+            {
+                "ignoreAtRules": [ "if", "else" ]
             }
         ],
         "string-quotes": "single",
@@ -74,6 +88,7 @@ module.exports = {
         "selector-list-comma-newline-before": "never-multi-line",
         "selector-list-comma-space-after": "always-single-line",
         "custom-media-pattern": "^[a-z][a-z-A-Z0-9]*$",
+        "media-feature-parentheses-space-inside": "never",
         "media-query-list-comma-newline-before": "never-multi-line",
         "at-rule-semicolon-space-before": "never",
         "indentation": 4,
@@ -89,6 +104,17 @@ module.exports = {
         "block-no-empty": null,
         "color-hex-length": "long",
         "color-hex-case": ["upper"],
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment"
+                ]
+            }
+        ],
         "shorthand-property-no-redundant-values": null,
         "scss/dollar-variable-pattern": "^[a-z][a-z-A-Z0-9]*$",
         "scss/dollar-variable-colon-space-after": "always-single-line",
@@ -112,7 +138,11 @@ module.exports = {
         "scss/at-else-if-parentheses-space-before": "always",
         "scss/at-function-parentheses-space-before": "never",
         "scss/at-function-pattern": "^[a-z][a-z-A-Z0-9]*$",
-        "scss/at-mixin-parentheses-space-before": "never"
+        "scss/at-mixin-parentheses-space-before": "never",
+        "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-else-closing-brace-space-after": "always-intermediate",
+        "scss/at-else-empty-line-before": "never",
+        "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-if-closing-brace-space-after": "always-intermediate"
     }
 }
-
