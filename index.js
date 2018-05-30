@@ -23,6 +23,7 @@ module.exports = {
                     "extend",
                     "include",
                     "else",
+                    "elseif",
                     "content"
                 ]
             }
@@ -38,8 +39,12 @@ module.exports = {
                     "if",
                     "for",
                     "else",
+                    "elseif",
                     "error",
-                    "each"
+                    "each",
+                    "function",
+                    "return",
+                    "while"
                 ]
             }
         ],
@@ -56,7 +61,7 @@ module.exports = {
         "block-closing-brace-newline-after": [
             "always",
             {
-                "ignoreAtRules": [ "if", "else" ]
+                "ignoreAtRules": [ "if", "else", "elseif" ]
             }
         ],
         "string-quotes": "single",
