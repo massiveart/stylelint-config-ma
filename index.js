@@ -44,6 +44,7 @@ module.exports = {
                     "each",
                     "function",
                     "return",
+                    "support",
                     "while"
                 ]
             }
