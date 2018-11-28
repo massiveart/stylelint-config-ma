@@ -105,8 +105,8 @@ module.exports = {
             }
         ],
         "no-duplicate-selectors": true,
-        "no-empty-source": null,
-        "block-no-empty": null,
+        "no-empty-source": true,
+        "block-no-empty": true,
         "color-hex-length": "long",
         "color-hex-case": ["upper"],
         "rule-empty-line-before": [
@@ -120,7 +120,7 @@ module.exports = {
                 ]
             }
         ],
-        "shorthand-property-no-redundant-values": null,
+        "shorthand-property-no-redundant-values": true,
         "scss/dollar-variable-pattern": "^[a-z][a-z-A-Z0-9]*$",
         "scss/dollar-variable-colon-space-after": "always-single-line",
         "scss/dollar-variable-colon-space-before": "never",
