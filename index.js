@@ -64,7 +64,7 @@ module.exports = {
                 "ignoreAtRules": [ "if", "else", "elseif" ]
             }
         ],
-        "font-weight-notation": "named-where-possible",
+        "font-weight-notation": "numeric",
         "string-quotes": "single",
         "value-keyword-case": "lower",
         "declaration-empty-line-before": "never",
