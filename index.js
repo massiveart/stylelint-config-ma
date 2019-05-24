@@ -98,12 +98,7 @@ module.exports = {
         "at-rule-semicolon-space-before": "never",
         "indentation": 4,
         "max-line-length": 120,
-        "no-descending-specificity": [
-            true,
-            {
-                "severity": "warning"
-            }
-        ],
+        "no-descending-specificity": null,
         "no-duplicate-selectors": true,
         "no-empty-source": true,
         "block-no-empty": true,
