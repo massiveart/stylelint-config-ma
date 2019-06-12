@@ -1,0 +1,6 @@
+.circleci
+.idea
+.editorconfig
+.gitattributes
+CHANGELOG.md
+test/

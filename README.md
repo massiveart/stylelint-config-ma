@@ -1,6 +1,9 @@
 # stylelint-config-ma
 
-![CircleCi](https://circleci.com/gh/massiveart/stylelint-config-ma/tree/master.png)
+[![CircleCi](https://circleci.com/gh/massiveart/stylelint-config-ma.png?style=shield)](https://circleci.com/gh/massiveart/stylelint-config-ma)
+[![npm](https://img.shields.io/npm/v/stylelint-config-ma.svg)](https://www.npmjs.com/package/stylelint-config-ma)
+[![Size](https://img.shields.io/github/size/massiveart/stylelint-config-ma/index.js.svg)](https://github.com/massiveart/stylelint-config-ma/blob/master/index.js)
+[![Install Size](https://packagephobia.now.sh/badge?p=stylelint-config-ma)](https://packagephobia.now.sh/result?p=stylelint-config-ma)
 
 Stylelint shareable config used by MASSIVE ART.
 
@@ -52,6 +55,8 @@ Copy the text of the last release into and get new release.
 ```
 git fetch --tags
 git checkout <version>
+rm CHANGELOG.md # else it will be published with it
+npm pack --dry-run # check that no unnecessary files are packed
 npm publish
 ```
 
