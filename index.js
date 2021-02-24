@@ -38,12 +38,14 @@ module.exports = {
                     "mixin",
                     "if",
                     "for",
+                    "forward",
                     "else",
                     "elseif",
                     "error",
                     "each",
                     "function",
                     "return",
+                    "use",
                     "while"
                 ]
             }
