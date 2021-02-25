@@ -1,0 +1,6 @@
+@use 'forward';
+
+.test-class {
+    background: forward.$variables-test;
+    color: forward.$variables-testColor;
+}

@@ -1,0 +1,6 @@
+@use 'variables';
+
+.test-class {
+    background: variables.$test;
+    color: variables.$testColor;
+}
