@@ -36,6 +36,7 @@ module.exports = {
                     "extend",
                     "include",
                     "mixin",
+                    "container",
                     "if",
                     "for",
                     "forward",

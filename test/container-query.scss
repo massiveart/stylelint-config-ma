@@ -1,0 +1,11 @@
+// polyfill available here: https://github.com/jsxtools/cqfill
+
+.container {
+    contain: layout inline-size;
+}
+
+@container (min-width: 700px) {
+    .contained {
+        /* styles applied when a container is at least 700px */
+    }
+}
