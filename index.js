@@ -72,7 +72,7 @@ module.exports = {
         "value-keyword-case": "lower",
         "declaration-empty-line-before": "never",
         "selector-attribute-quotes": "always",
-        "selector-class-pattern": "^[a-z][a-z-A-Z0-9]*$",
+        "selector-class-pattern": "^[a-z][a-z-A-Z_0-9]*$",
         "selector-max-compound-selectors": [
             3,
             {
