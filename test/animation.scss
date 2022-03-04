@@ -1,4 +1,4 @@
-@keyframes exampleTest {
+@keyframes example-test {
     from {
         background-color: red;
     }
@@ -9,9 +9,9 @@
 }
 
 .test {
-    animation-name: exampleTest;
+    animation-name: example-test;
 }
 
 .unknown {
-    animation-name: unknownFunction;
+    animation-name: unknown-function;
 }
