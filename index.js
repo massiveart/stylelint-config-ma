@@ -2,6 +2,7 @@
 
 module.exports = {
     "extends": "stylelint-config-standard",
+    "customSyntax": "scss",
     "plugins": [
         "stylelint-scss"
     ],
@@ -61,6 +62,7 @@ module.exports = {
                 ]
             }
         ],
+        "function-no-unknown": null, // https://github.com/stylelint-scss/stylelint-scss/issues/589
         "block-closing-brace-newline-after": [
             "always",
             {

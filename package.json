@@ -4,7 +4,7 @@
   "description": "Stylelint shareable config used by MASSIVE ART",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint --formatter verbose --config ./index.js --syntax scss test/*.scss"
+    "test": "stylelint --formatter verbose --config ./index.js test/*.scss --custom-syntax postcss-scss"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/massiveart/stylelint-config-ma#readme",
   "dependencies": {
+    "postcss": "^8.4.7",
+    "postcss-scss": "^4.0.3",
     "stylelint-config-standard": "^20.0.0 || ^21.0.0 || ^22.0.0 || ^23.0.0 || ^24.0.0 || ^25.0.0",
     "stylelint-scss": "^3.0.0 || ^4.1.0"
   },
