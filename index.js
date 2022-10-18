@@ -71,7 +71,12 @@ module.exports = {
         ],
         "font-weight-notation": "numeric",
         "string-quotes": "single",
-        "value-keyword-case": "lower",
+        "value-keyword-case": [
+            "lower",
+            {
+                camelCaseSvgKeywords: true,
+            }
+        ],
         "declaration-empty-line-before": "never",
         "selector-attribute-quotes": "always",
         "selector-class-pattern": "^[a-z][a-z-A-Z_0-9]*$",
