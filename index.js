@@ -4,6 +4,7 @@ module.exports = {
     'extends': 'stylelint-config-standard-scss',
     'customSyntax': 'postcss-scss',
     'rules': {
+        'alpha-value-notation': 'number',
         'at-rule-empty-line-before': [
             'always',
             {
@@ -60,7 +61,6 @@ module.exports = {
         ],
         'selector-max-universal': 1,
         'selector-max-specificity': '0,3,1',
-        'selector-not-notation': 'simple',
         'value-keyword-case': [
             'lower',
             {
