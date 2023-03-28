@@ -10,7 +10,6 @@ module.exports = {
                 except: ['blockless-after-blockless', 'first-nested'],
                 ignore: ['after-comment'],
                 ignoreAtRules: [
-                    'if',
                     'media',
                     'return',
                     'extend',
