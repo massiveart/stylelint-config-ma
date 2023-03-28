@@ -1,7 +1,9 @@
-$grid-columns: 12;
+@use 'sass:math';
 
-@for $i from 1 through $grid-columns {
+$gridColumns: 12;
+
+@for $i from 1 through $gridColumns {
     .width-#{$i} {
-        width: percentage($i / $grid-columns) !important;
+        width: math.percentage($i / $gridColumns) !important;
     }
 }

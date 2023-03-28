@@ -1,85 +1,41 @@
 "use strict"
 
 module.exports = {
-    "extends": "stylelint-config-standard",
-    "customSyntax": "scss",
-    "plugins": [
-        "stylelint-scss"
-    ],
-    "ignoreFiles": [
-        "sass/vendor/*.scss"
-    ],
+    "extends": "stylelint-config-standard-scss",
     "rules": {
         "at-rule-empty-line-before": [
             "always",
             {
-                "except": [
-                    "blockless-after-same-name-blockless",
-                    "first-nested"
-                ],
-                "ignore": [
-                    "after-comment"
-                ],
                 "ignoreAtRules": [
-                    "extend",
-                    "include",
-                    "else",
-                    "elseif",
-                    "content"
-                ]
-            }
-        ],
-        "at-rule-no-unknown": [
-            true,
-            {
-                "ignoreAtRules": [
-                    "content",
-                    "extend",
-                    "include",
-                    "mixin",
-                    "container",
                     "if",
-                    "for",
-                    "forward",
-                    "else",
-                    "elseif",
-                    "error",
-                    "each",
-                    "function",
+                    "media",
                     "return",
-                    "use",
-                    "while"
+                    "extend",
+                    "include",
+                    "else",
                 ]
-            }
-        ],
-        "at-rule-name-space-after": "always",
-        "function-comma-newline-before": "never-multi-line",
-        "function-name-case": [
-            "lower",
-            {
-                "ignoreFunctions": [
-                    "/^[a-z][a-z-A-Z0-9]*$/"
-                ]
-            }
-        ],
-        "function-no-unknown": null, // https://github.com/stylelint-scss/stylelint-scss/issues/589
-        "block-closing-brace-newline-after": [
-            "always",
-            {
-                "ignoreAtRules": [ "if", "else", "elseif" ]
             }
         ],
         "font-weight-notation": "numeric",
-        "string-quotes": "single",
         "value-keyword-case": [
             "lower",
             {
                 camelCaseSvgKeywords: true,
             }
         ],
-        "declaration-empty-line-before": "never",
-        "selector-attribute-quotes": "always",
-        "selector-class-pattern": "^[a-z][a-z-A-Z_0-9]*$",
+        "keyframes-name-pattern": [
+            "^[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])*$",
+            {
+                message: (name) => `Expected keyframe name "${name}" to be camelCase`,
+            },
+        ],
+        "selector-class-pattern": [
+            "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+            {
+                resolveNestedSelectors: true,
+                message: (selector) => `Expected class selector "${selector}" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms`,
+            },
+        ],
         "selector-max-compound-selectors": [
             3,
             {
@@ -100,60 +56,36 @@ module.exports = {
             }
         ],
         "selector-max-universal": 1,
-        "selector-max-specificity": "0,3,0",
-        "selector-list-comma-newline-before": "never-multi-line",
-        "selector-list-comma-space-after": "always-single-line",
-        "custom-media-pattern": "^[a-z][a-z-A-Z0-9]*$",
-        "media-feature-parentheses-space-inside": "never",
-        "media-query-list-comma-newline-before": "never-multi-line",
-        "at-rule-semicolon-space-before": "never",
-        "indentation": 4,
-        "max-line-length": 120,
-        "no-descending-specificity": null,
+        "selector-max-specificity": "0,3,1",
+        "custom-media-pattern": [
+            "^[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])*$",
+            {
+                message: (name) => `Expected custom media query name "${name}" to be camelCase`,
+            },
+        ],
         "no-duplicate-selectors": true,
         "no-empty-source": true,
         "block-no-empty": true,
         "color-hex-length": "long",
-        "color-hex-case": ["upper"],
-        "rule-empty-line-before": [
-            "always",
+        "number-max-precision": 3,
+        "scss/dollar-variable-pattern": [
+            "^[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])*$",
             {
-                "except": [
-                    "first-nested"
-                ],
-                "ignore": [
-                    "after-comment"
-                ]
-            }
+                message: "Expected variable to be camelCase",
+            },
         ],
-        "shorthand-property-no-redundant-values": true,
-        "scss/dollar-variable-pattern": "^[a-z][a-z-A-Z0-9]*$",
-        "scss/dollar-variable-colon-space-after": "always-single-line",
-        "scss/dollar-variable-colon-space-before": "never",
-        "scss/dollar-variable-empty-line-before": [
-            "always",
+        "scss/percent-placeholder-pattern": [
+            "^[a-z][a-z-A-Z0-9]*$",
             {
-                "except": [
-                    "first-nested",
-                    "after-comment",
-                    "after-dollar-variable"
-                ]
-            }
+                message: "Expected placeholder to be camelCase",
+            },
         ],
-        "scss/percent-placeholder-pattern": "^[a-z][a-z-A-Z0-9]*$",
-        "scss/double-slash-comment-whitespace-inside": "always",
         "scss/declaration-nested-properties": "never",
-        "scss/operator-no-newline-after": true,
-        "scss/operator-no-newline-before": true,
-        "scss/operator-no-unspaced": true,
-        "scss/at-else-if-parentheses-space-before": "always",
-        "scss/at-function-parentheses-space-before": "never",
-        "scss/at-function-pattern": "^[a-z][a-z-A-Z0-9]*$",
-        "scss/at-mixin-parentheses-space-before": "never",
-        "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
-        "scss/at-else-closing-brace-space-after": "always-intermediate",
-        "scss/at-else-empty-line-before": "never",
-        "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
-        "scss/at-if-closing-brace-space-after": "always-intermediate"
+        "scss/at-function-pattern": [
+            "^[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])*$",
+            {
+                message: "Expected function name to be camelCase",
+            },
+        ],
     }
 }
