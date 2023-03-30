@@ -5,20 +5,6 @@ module.exports = {
     'customSyntax': 'postcss-scss',
     'rules': {
         'alpha-value-notation': 'number',
-        'at-rule-empty-line-before': [
-            'always',
-            {
-                except: ['blockless-after-blockless', 'first-nested'],
-                ignore: ['after-comment'],
-                ignoreAtRules: [
-                    'media',
-                    'return',
-                    'extend',
-                    'include',
-                    'else',
-                ]
-            }
-        ],
         'block-no-empty': true,
         'color-hex-length': 'long',
         'comment-no-empty': true,
@@ -40,27 +26,12 @@ module.exports = {
                 message: (selector) => `Expected class selector '${selector}' to match BEM CSS pattern (https://en.bem.info/methodology/css). Selector validation tool: https://regexr.com/3apms`,
             },
         ],
-        'selector-max-compound-selectors': [
-            3,
-            {
-                severity: 'warning'
-            }
-        ],
+        'selector-max-compound-selectors': 3,
         'selector-max-id': 0,
-        'selector-max-type': [
-            2,
-            {
-                severity: 'warning'
-            }
-        ],
-        'selector-max-combinators': [
-            2,
-            {
-                severity: 'warning'
-            }
-        ],
+        'selector-max-type': 2,
+        'selector-max-combinators': 2,
         'selector-max-universal': 1,
-        'selector-max-specificity': '0,3,1',
+        'selector-max-specificity': '0,3,0',
         'value-keyword-case': [
             'lower',
             {
@@ -81,6 +52,7 @@ module.exports = {
             },
         ],
         'scss/declaration-nested-properties': 'never',
+        'scss/double-slash-comment-empty-line-before': null,
         'scss/dollar-variable-pattern': [
             '^[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])*$',
             {
