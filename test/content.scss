@@ -1,0 +1,11 @@
+@mixin mq($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+.test {
+    @include mq(700px) {
+        color: green;
+    }
+}
