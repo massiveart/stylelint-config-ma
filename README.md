@@ -2,7 +2,7 @@
 
 [![CircleCi](https://circleci.com/gh/massiveart/stylelint-config-ma.png?style=shield)](https://circleci.com/gh/massiveart/stylelint-config-ma)
 [![npm](https://img.shields.io/npm/v/stylelint-config-ma.svg)](https://www.npmjs.com/package/stylelint-config-ma)
-[![Size](https://img.shields.io/github/size/massiveart/stylelint-config-ma/index.js.svg)](https://github.com/massiveart/stylelint-config-ma/blob/master/index.js)
+[![Size](https://img.shields.io/github/size/massiveart/stylelint-config-ma/index.js.svg)](https://github.com/massiveart/stylelint-config-ma/blob/main/index.js)
 [![Install Size](https://packagephobia.now.sh/badge?p=stylelint-config-ma)](https://packagephobia.now.sh/result?p=stylelint-config-ma)
 
 Stylelint shareable config used by MASSIVE ART.
@@ -31,15 +31,15 @@ Create a [`.stylelintrc`](http://stylelint.io/user-guide/configuration/) config 
 
 ### 1. Create release on github
 
-Update package.json version on master branch:
+Update package.json version on main branch:
 
 ```bash
-git checkout master
-git pull origin master
+git checkout main
+git pull origin main
 npm version [ major | minor | patch ] --no-git-tag-version
 git add .
 git commit -m "Release <version>"
-git push origin master
+git push origin main
 ```
 
 Generate changelog:
